@@ -27,6 +27,9 @@ var seattleStoreInfo = {
       liEl.textContent = `${hours[i]}: Cookies ${this.cookiesEachHour[i]}`;
       seattleStoreElement.appendChild(liEl);
     }
+    var liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalCookiesForDay}`; 
+    seattleStoreElement.appendChild(liEl);
   }
 };
 
@@ -37,13 +40,8 @@ function cookiesEachHourTotal (object) {
     var totalCookiesPerHour = Math.round(randomNumber (object.minCustomersEachHour, object.maxCustomersEachHour)*object.averageCookiesPerCustomer);
     //console.log('totalcookiesperhour:' , totalCookiesPerHour);
     object.cookiesEachHour.push(totalCookiesPerHour);
+    object.totalCookiesForDay += totalCookiesPerHour;
   }
-}
-
-totalLiCookie: function(object) {
-    var liEl = docuument.createElement('li');
-    liEl.textContent= `Total Cookies: ${this.totalCookiesForDay}`;
-    seattleStoreElement.appendChild(liEl);
 }
 
 
@@ -70,6 +68,9 @@ var tokyoStoreInfo = {
       liEl.textContent = `${hours[i]}: Cookies ${this.cookiesEachHour[i]}`;
       tokyoStoreElement.appendChild(liEl);
     }
+    var liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalCookiesForDay}`; 
+    tokyoStoreElement.appendChild(liEl);
   }
 };
 
@@ -90,6 +91,9 @@ var dubaiStoreInfo = {
       liEl.textContent = `${hours[i]}: Cookies ${this.cookiesEachHour[i]}`;
       dubaiStoreElement.appendChild(liEl);
     }
+    var liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalCookiesForDay}`; 
+    dubaiStoreElement.appendChild(liEl);
   }
 };
 
@@ -109,6 +113,9 @@ var parisStoreInfo = {
       liEl.textContent = `${hours[i]}: Cookies ${this.cookiesEachHour[i]}`;
       parisStoreElement.appendChild(liEl);
     }
+    var liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalCookiesForDay}`; 
+    parisStoreElement.appendChild(liEl);
   }
 };
 
@@ -128,6 +135,9 @@ var limaStoreInfo = {
       liEl.textContent = `${hours[i]}: Cookies ${this.cookiesEachHour[i]}`;
       limaStoreElement.appendChild(liEl);
     }
+    var liEl = document.createElement('li');
+    liEl.textContent = `Total: ${this.totalCookiesForDay}`; 
+    limaStoreElement.appendChild(liEl);
   }
 };
 
