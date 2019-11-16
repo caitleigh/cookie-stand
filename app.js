@@ -7,6 +7,9 @@ var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 var allStores = [];
 
+// var storeTableElement = document.getElementById('storeTable');
+
+//Store.allStoresTotal = 0;
 
 //Single constructor
 function Store (storeName, minCustomersEachHour, maxCustomersEachHour, averageCookiesPerCustomer) {
@@ -17,6 +20,9 @@ function Store (storeName, minCustomersEachHour, maxCustomersEachHour, averageCo
   this.cookiesEachHour = [];
   this.totalCookiesForDay = 0;
   this.cookiesEachHourTotal();
+  allStores.push(this);
+  //this.renderShopRows();
+
 
   this.render= function() {
     var h2El = document.createElement('h2');
@@ -28,12 +34,11 @@ function Store (storeName, minCustomersEachHour, maxCustomersEachHour, averageCo
       liEl.textContent = `${hours[i]}: Cookies ${this.cookiesEachHour[i]}`;
       storeInfoElement.appendChild(liEl);
     }
-    var liEl = document.createElement('li');
-    liEl.textContent = `Total: ${this.totalCookiesForDay}`;
-    storeInfoElement.appendChild(liEl);
-  };
+    var liElem = document.createElement('li');
+    liElem.textContent = `Total: ${this.totalCookiesForDay}`;
+    storeInfoElement.appendChild(liElem);
 
-  allStores.push(this);
+  };
 
 }
 
@@ -51,34 +56,21 @@ Store.prototype.cookiesEachHourTotal = function () {
   }
 };
 
-// function cookiesEachHourTotal (Store) {
-//   for (var i=0; i < hours.length; i++) {
-//     var totalCookiesPerHour = Math.ceil(randomNumber (Store.minCustomersEachHour, Store.maxCustomersEachHour)*Store.averageCookiesPerCustomer);
-//     //console.log('totalcookiesperhour:' , totalCookiesPerHour);
-//     Store.cookiesEachHour.push(totalCookiesPerHour);
-//     Store.totalCookiesForDay += totalCookiesPerHour;
-//   }
-// }
-
 new Store('Seattle', '23', '65', '6.3');
 new Store('Tokyo', '3', '24', '1.2');
 new Store('Dubai', '11', '38', '3.7');
 new Store('Paris', '20', '38', '2.3');
 new Store('Lima', '2', '16', '4.6');
+
 console.log(allStores);
 
-//cookiesEachHourTotal (allStores[0]);
 allStores[0].render ();
 
-//cookiesEachHourTotal(allStores[1]);
 allStores[1].render();
 
-//cookiesEachHourTotal(allStores[2]);
 allStores[2].render();
 
-//cookiesEachHourTotal(allStores[3]);
 allStores[3].render();
 
-//cookiesEachHourTotal(allStores[4]);
 allStores[4].render();
 
