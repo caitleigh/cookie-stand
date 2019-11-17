@@ -100,7 +100,6 @@ Store.prototype.renderShopRows = function () {
 };
 
 //funciton to render with totals
-
 var renderFooterRow = function () {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
@@ -130,19 +129,33 @@ new Store('Dubai', '11', '38', '3.7');
 new Store('Paris', '20', '38', '2.3');
 new Store('Lima', '2', '16', '4.6');
 
-renderFooterRow();
-
 var newStoreSubmission = document.getElementById('new-store-submission');
 newStoreSubmission.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
+  var remove = document.getElementById('storeTable').lastElementChild;
+  storeTableElement.removeChild(remove);
+
   event.preventDefault();
   var storeName=event.target.inputStoreLocal.value;
   var minCust=event.target.inputMinCustPerDay.value;
   var maxCust=event.target.inputMaxCustPerDay.value;
+  var avgCookie =event.target.inputAvgCookiePerCust.value;
 
-  console.log(`store: ${storeName}`);
-  console.log(`min: ${minCust}`);
-  console.log(`max: ${maxCust}`);
+  new Store(storeName, minCust, maxCust, avgCookie);
 
+  event.target.inputStoreLocal.value = '';
+  event.target.inputMinCustPerDay.value='null';
+  event.target.inputMaxCustPerDay.value='null';
+  event.target.inputAvgCookiePerCust.value='null';
+
+  renderFooterRow();
+
+  //storeTableElement.removeChild(renderFooterRow());
 }
+
+
+console.log(allStores);
+
+renderFooterRow();
+

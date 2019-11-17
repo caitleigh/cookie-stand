@@ -17,13 +17,16 @@
    <form id="new-store-submission">
        <fieldset>
            <label>Enter Store Location Here:</label>
-           <input id="inputStoreLocal" type="text" placeholder="Store Location goes here...">
+           <input id="inputStoreLocal" type="text" placeholder="Store location goes here..." required>
         </br>
             <label>Minimum Customers Per Day:</label>
-            <input id="inputMinCustPerDay" type="number" placeholder = "">
+            <input id="inputMinCustPerDay" type="number" placeholder = "" required>
         </br>
             <label>Maximum Customers Per Day:</label>
-            <input id="inputMaxCustPerDay" type="number" placeholder = "">
+            <input id="inputMaxCustPerDay" type="number" placeholder = "" required>
+        </br>
+            <lable>Average Cookies Per Customer:</lable>
+            <input id="inputAvgCookiePerCust" type="number" step="any" placeholder = "" required>
             <button value="submit">Submit</button>
        </fieldset>
    </form>
