@@ -131,3 +131,18 @@ new Store('Paris', '20', '38', '2.3');
 new Store('Lima', '2', '16', '4.6');
 
 renderFooterRow();
+
+var newStoreSubmission = document.getElementById('new-store-submission');
+newStoreSubmission.addEventListener('submit', handleSubmit);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  var storeName=event.target.inputStoreLocal.value;
+  var minCust=event.target.inputMinCustPerDay.value;
+  var maxCust=event.target.inputMaxCustPerDay.value;
+
+  console.log(`store: ${storeName}`);
+  console.log(`min: ${minCust}`);
+  console.log(`max: ${maxCust}`);
+
+}

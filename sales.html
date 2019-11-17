@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Sales Info</title>
 </head>
 <body>
    <h1>Sales</h1>
@@ -13,6 +13,20 @@
    <section id="storeInfo"></section>
 
    <table id="storeTable"></table>
+
+   <form id="new-store-submission">
+       <fieldset>
+           <label>Enter Store Location Here:</label>
+           <input id="inputStoreLocal" type="text" placeholder="Store Location goes here...">
+        </br>
+            <label>Minimum Customers Per Day:</label>
+            <input id="inputMinCustPerDay" type="number" placeholder = "">
+        </br>
+            <label>Maximum Customers Per Day:</label>
+            <input id="inputMaxCustPerDay" type="number" placeholder = "">
+            <button value="submit">Submit</button>
+       </fieldset>
+   </form>
 
     <script src="app.js"></script>
 </body>
