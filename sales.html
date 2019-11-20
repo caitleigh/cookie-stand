@@ -5,32 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sales Info</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>Sales</h1>
-   <a href="../index.html">Home</a>
 
-   <section id="storeInfo"></section>
+    <header>
+        <div class = "fishLogoHeader">
+            <img class="salmonHeader" src="fishLogo.png" alt="Salmon Fish Logo" width=40%>
+            <div class="salesPageHeader">
+                <h1>Sales</h1>
+            </div>
+            </div>
+    </header>
 
-   <table id="storeTable"></table>
-
+    <section class="navBar">
+    <a href="../index.html">Home</a>
+    </section>
+    
+    
    <form id="new-store-submission">
        <fieldset>
            <label>Enter Store Location Here:</label>
            <input id="inputStoreLocal" type="text" placeholder="Store location goes here..." required>
+           <lable>Average Cookies Per Customer:</lable>
+           <input id="inputAvgCookiePerCust" type="number" step="any" placeholder = "" required>
         </br>
-            <label>Minimum Customers Per Day:</label>
-            <input id="inputMinCustPerDay" type="number" placeholder = "" required>
-        </br>
-            <label>Maximum Customers Per Day:</label>
-            <input id="inputMaxCustPerDay" type="number" placeholder = "" required>
-        </br>
-            <lable>Average Cookies Per Customer:</lable>
-            <input id="inputAvgCookiePerCust" type="number" step="any" placeholder = "" required>
-            <button value="submit">Submit</button>
-       </fieldset>
-   </form>
+        <label>Minimum Customers Per Day:</label>
+        <input id="inputMinCustPerDay" type="number" placeholder = "" required>
+    <label>Maximum Customers Per Day:</label>
+    <input id="inputMaxCustPerDay" type="number" placeholder = "" required>
+</br>
+<button value="submit">Submit</button>
+</fieldset>
+</form>
+</br>
+</br>
 
-    <script src="app.js"></script>
+<table id="storeTable"></table>
+
+<script src="app.js"></script>
 </body>
 </html>

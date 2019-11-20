@@ -129,6 +129,7 @@ new Store('Dubai', '11', '38', '3.7');
 new Store('Paris', '20', '38', '2.3');
 new Store('Lima', '2', '16', '4.6');
 
+
 var newStoreSubmission = document.getElementById('new-store-submission');
 newStoreSubmission.addEventListener('submit', handleSubmit);
 
@@ -142,18 +143,15 @@ function handleSubmit(event) {
   var maxCust=event.target.inputMaxCustPerDay.value;
   var avgCookie =event.target.inputAvgCookiePerCust.value;
 
-  new Store(storeName, minCust, maxCust, avgCookie);
+  new Store(storeName, +minCust, +maxCust, +avgCookie);
 
-  event.target.inputStoreLocal.value = '';
-  event.target.inputMinCustPerDay.value='null';
-  event.target.inputMaxCustPerDay.value='null';
-  event.target.inputAvgCookiePerCust.value='null';
+  event.target.inputStoreLocal.value = null;
+  event.target.inputMinCustPerDay.value= null;
+  event.target.inputMaxCustPerDay.value= null;
+  event.target.inputAvgCookiePerCust.value= null;
 
   renderFooterRow();
-
-  //storeTableElement.removeChild(renderFooterRow());
 }
-
 
 console.log(allStores);
 
