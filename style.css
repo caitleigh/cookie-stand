@@ -1,33 +1,33 @@
 
 body {
     background-color: white;
-    font-family: Ariel,Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 12pt;  
     color: black;
-}
-
-
-.fishLogoHeader {
-    position: relative;
-    opacity: 80%;
-    padding-bottom: 30px;
-    padding-left: 20px;
+    width: 960px;
+    padding-left: 15%;
+    padding-right: 15%;
 }
 
 .salesPageHeader, .homePageHeader {
-    position: absolute;
-    padding-left: 140px;
-    top: 60px;
-    font-size: 300%;
-    font-style: italic;
-    color: salmon;
+    font-size: 280%;
+    font-family: 'Raleway', sans-serif;
+    color: #FF894B;
     background-color: rgba(252, 252, 252, 0.5);
     font-weight: bold;
-    letter-spacing: 6px;
+    letter-spacing: 4px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.salmonHeader {
+    width: 150px;
+    padding-top: 5px;
 }
 
+
 .navBar {
-    background-color:salmon;
+    background-color: #FF894B;
     padding-left: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -37,6 +37,7 @@ body {
 
 .main {
     background-color: rgb(214, 214, 214);
+    padding: 20px;
 }
 
 table {
@@ -49,21 +50,28 @@ table {
 td {
     padding: 8px;
     border: solid;
+    border-color: black;
+    border-width: 2px;
     border-collapse: collapse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #10B3AC;
 }
 
 th {
     font-weight: bold;
     border: solid;
     border-color: black;
-    color: salmon;
+    border-width: 2px;
+    color: #FF9A63;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 form {
     border: solid;
-    border-color: salmon;
-    background-color: white;
-    font-size: 10pt;
+    border-color: #B35522;
+    color: #4AFFF8;
+    background-color: #FF9A63;
+    font-size: 12pt;
     padding: 5px;
     margin-left: 75px;
     margin-right: 75px;
@@ -73,11 +81,17 @@ form {
 }
 
 input {
-    background-color:rgba(247, 132, 132, 0.753);
+    background-color: #FF9A63;
     font-weight: bold;
     color: black;
 }
 
 button {
-    background-color: salmon;
+    background-color:#FF894B;
 }
+
+#B35522
+#FF9A63
+#FF894B
+#10B3AC
+#4AFFF8
